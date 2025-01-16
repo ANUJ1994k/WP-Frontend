@@ -20,7 +20,7 @@ const Navbar = () => {
           to="/"
           className="navbar-text"
         >
-          User List App
+          Users List App
         </Typography>
         <Button color="inherit" component={Link} to="/">Homepage</Button>
         <Button color="inherit" component={Link} to="/details">User Detail Page</Button>
