@@ -1,43 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-/* Default light theme */
-body.light {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  body.dark {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  
-  /* Button styling for the theme toggle */
-  .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-  }
-  
-  .theme-toggle button {
-    padding: 10px 15px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  body.light .theme-toggle button {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  body.dark .theme-toggle button {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
+.light {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

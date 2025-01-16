@@ -1,17 +1,21 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useContext, useReducer } from 'react';
 
 const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
-  
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+const themeReducer = (state, action) => {
+  switch (action.type) {
+    case 'TOGGLE_THEME':
+      return { theme: state.theme === 'light' ? 'dark' : 'light' };
+    default:
+      throw new Error(`Unhandled action type: ${action.type}`);
+  }
+};
 
+export const ThemeProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(themeReducer, { theme: 'light' });
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className={theme}>{children}</div>
+    <ThemeContext.Provider value={{ state, dispatch }}>
+      {children}
     </ThemeContext.Provider>
   );
 };
