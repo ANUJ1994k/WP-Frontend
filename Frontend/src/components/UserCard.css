@@ -1,7 +1,0 @@
-.card-details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 25px;
-    gap: 10px;
-    background-color: blue;
-}
