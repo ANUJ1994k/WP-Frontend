@@ -23,3 +23,6 @@ Type : npm run dev
 >CSS, Tailwind CSS
 >Material UI
 >HTML, JSX code and so on.
+
+
+Deploy On vercel and Deploy Link : https://wp-frontend-self.vercel.app/
